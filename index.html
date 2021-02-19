@@ -13,17 +13,14 @@
 
 <body>
     <div id="app"></div>
-
+    <div id="title"></div>
     <div id="like_button_container"></div>
 </body>
 <script type="text/babel">
-    const name = 'Clementine'
+    const title = "안녕 반작용?반동?반대?반항?반응?반발?역행?역습?ㅋ"
+    const name = "Clementine"
     const header_one = <h1 className="hello">My name is {name}!</h1>
 
-    ReactDOM.render(
-        header_one,
-        document.getElementById('app')
-    )
 
     const e = React.createElement
 
@@ -40,6 +37,11 @@
     }
 
     const domContainer = document.querySelector('#like_button_container')
+
+
+    document.title = title
+    ReactDOM.render(header_one, document.getElementById('app'))
+    ReactDOM.render(title, document.getElementById('title'))
     ReactDOM.render(e(LikeButton), domContainer)
 </script>
 
